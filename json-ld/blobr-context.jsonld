@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "blobr": "https://www.blobr.io/ontology/",
+    "campaignId": "blobr:campaignId",
+    "agentType": "blobr:agentType",
+    "recommendationId": "blobr:recommendationId",
+    "priority": "blobr:priority",
+    "rationale": "description",
+    "biddingStrategy": "blobr:biddingStrategy",
+    "targetCpaMicros": "blobr:targetCpa",
+    "targetRoas": "blobr:targetRoas",
+    "amountMicros": "blobr:budgetAmount",
+    "metrics": "blobr:campaignMetrics",
+    "impressions": "blobr:impressions",
+    "clicks": "blobr:clicks",
+    "conversions": "blobr:conversions",
+    "roas": "blobr:returnOnAdSpend",
+    "status": "blobr:status"
+  }
+}

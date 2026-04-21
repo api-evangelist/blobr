@@ -1,0 +1,67 @@
+name: Blobr Google Ads AI Platform Capability
+description: >-
+  Naftiko capability definition for Blobr's AI-powered Google Ads management platform,
+  providing campaign analysis, AI recommendations, and automated optimization via
+  50+ specialized AI agents.
+version: 1.0.0
+capabilities:
+  - name: connectAccount
+    description: Connect a Google Ads account to Blobr for AI analysis and management
+    method: POST
+    path: /accounts/connect
+    body:
+      googleAdsCustomerId: string
+  - name: listAccounts
+    description: List all Google Ads accounts connected to Blobr
+    method: GET
+    path: /accounts
+  - name: listCampaigns
+    description: List campaigns for a connected Google Ads account with performance metrics
+    method: GET
+    path: /accounts/{accountId}/campaigns
+  - name: listRecommendations
+    description: List AI-generated recommendations pending review
+    method: GET
+    path: /accounts/{accountId}/recommendations
+    parameters:
+      - name: status
+        type: string
+        required: false
+        description: Filter by status (pending, approved, rejected, applied)
+      - name: agentType
+        type: string
+        required: false
+      - name: priority
+        type: string
+        required: false
+  - name: approveRecommendation
+    description: Approve an AI recommendation for application to Google Ads
+    method: POST
+    path: /recommendations/{recommendationId}/approve
+  - name: rejectRecommendation
+    description: Reject an AI recommendation
+    method: POST
+    path: /recommendations/{recommendationId}/reject
+  - name: bulkApprove
+    description: Approve multiple recommendations at once
+    method: POST
+    path: /accounts/{accountId}/recommendations/bulk-approve
+  - name: runAgentNow
+    description: Trigger an AI agent to run immediately outside of scheduled cycle
+    method: POST
+    path: /accounts/{accountId}/agents/{agentType}/run
+  - name: configureRules
+    description: Set custom rules and constraints governing AI agent behavior
+    method: PUT
+    path: /accounts/{accountId}/rules
+authentication:
+  type: oauth2
+  flows:
+    authorizationCode:
+      authorizationUrl: https://app.blobr.ai/oauth/authorize
+      tokenUrl: https://app.blobr.ai/oauth/token
+      scopes:
+        accounts:read: Read connected account data
+        recommendations:read: Read AI recommendations
+        recommendations:write: Approve or reject recommendations
+        agents:execute: Trigger agent runs

@@ -1,0 +1,44 @@
+rules:
+  blobr-campaign-status-enum:
+    description: Campaign status must use Google Ads enum values
+    message: "Campaign status must be ENABLED, PAUSED, or REMOVED"
+    given: "$.components.schemas.Campaign.properties.status"
+    then:
+      field: enum
+      function: truthy
+
+  blobr-recommendation-priority-enum:
+    description: Recommendation priority must be high, medium, or low
+    message: "Recommendation priority must use defined enum values"
+    given: "$.components.schemas.Recommendation.properties.priority"
+    then:
+      field: enum
+      function: truthy
+
+  blobr-recommendation-status-enum:
+    description: Recommendation status must use defined workflow states
+    message: "Status must be pending, approved, rejected, or applied"
+    given: "$.components.schemas.Recommendation.properties.status"
+    then:
+      field: enum
+      function: truthy
+
+  blobr-budget-micros:
+    description: Budget amounts should use Google Ads micros format
+    message: "Budget amountMicros should be of type integer"
+    given: "$.components.schemas.Campaign.properties.budget.properties.amountMicros"
+    then:
+      field: type
+      function: pattern
+      functionOptions:
+        match: "^integer$"
+
+  blobr-dates-iso8601:
+    description: Timestamp fields must use ISO 8601 date-time format
+    message: "Date-time fields must specify format: date-time"
+    given: "$.components.schemas[*].properties[?(@.description =~ /timestamp|created|applied/i)]"
+    then:
+      field: format
+      function: pattern
+      functionOptions:
+        match: "^date-time$"

@@ -1,0 +1,24 @@
+{
+  "campaignId": "12345678901",
+  "name": "Brand - Search - US",
+  "status": "ENABLED",
+  "advertisingChannelType": "SEARCH",
+  "budget": {
+    "amountMicros": 5000000000,
+    "deliveryMethod": "STANDARD"
+  },
+  "biddingStrategy": {
+    "type": "TARGET_CPA",
+    "targetCpaMicros": 25000000
+  },
+  "metrics": {
+    "impressions": 142500,
+    "clicks": 8750,
+    "costMicros": 218750000000,
+    "conversions": 875.5,
+    "ctr": 0.0614,
+    "averageCpc": 25000000,
+    "conversionRate": 0.1,
+    "roas": 4.2
+  }
+}

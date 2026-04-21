@@ -1,0 +1,48 @@
+name: Blobr AI Platform Vocabulary
+description: Key terms and concepts used in the Blobr Google Ads AI management platform
+terms:
+  - term: AI Agent
+    definition: >-
+      A specialized AI model within Blobr focused on a specific Google Ads optimization task,
+      such as keyword expansion, negative keyword curation, or ad copy improvement. Blobr
+      deploys 50+ distinct agents per account.
+  - term: Recommendation
+    definition: >-
+      An AI-generated suggestion to improve campaign performance, reviewed and selectively
+      approved by the user before being applied to Google Ads.
+  - term: Review-and-Edit Workflow
+    definition: >-
+      Blobr's human-in-the-loop process requiring user approval of AI recommendations before
+      changes are pushed to Google Ads, maintaining advertiser control.
+  - term: Negative Keyword
+    definition: >-
+      A keyword designation preventing ads from showing for searches containing that term,
+      used to eliminate irrelevant traffic and reduce wasted spend.
+  - term: ROAS (Return on Ad Spend)
+    definition: >-
+      Revenue generated per dollar spent on advertising. Calculated as conversion value
+      divided by ad cost. Target ROAS bidding strategies optimize toward a specific ROAS goal.
+  - term: CPA (Cost Per Acquisition)
+    definition: >-
+      The average cost of acquiring one conversion. Target CPA bidding strategies set
+      automatic bids to achieve the target cost per conversion.
+  - term: Quality Score
+    definition: >-
+      Google Ads metric (1-10) rating ad relevance, expected CTR, and landing page experience.
+      Higher Quality Scores lower costs and improve ad rank.
+  - term: Ad Rank
+    definition: >-
+      Google's formula determining ad position in search results, based on bid, Quality Score,
+      auction competitiveness, and ad extensions.
+  - term: Micros
+    definition: >-
+      Google Ads monetary unit where 1,000,000 micros equals $1.00. Used in campaign budgets,
+      CPC bids, and CPA targets via the Google Ads API.
+  - term: Performance Max (PMAX)
+    definition: >-
+      A Google Ads campaign type using machine learning to optimize across all Google channels
+      (Search, Display, YouTube, Gmail, Maps) from a single campaign.
+  - term: Custom Instructions
+    definition: >-
+      User-defined constraints and guidelines applied to Blobr AI agents, such as brand voice
+      rules, naming conventions, bid caps, and approved keyword themes.

@@ -1,0 +1,17 @@
+{
+  "name": "Blobr AI Recommendation Structure",
+  "description": "JSON structure for an AI-generated optimization recommendation",
+  "fields": [
+    { "name": "recommendationId", "type": "string", "required": true },
+    { "name": "agentType", "type": "string", "required": true },
+    { "name": "priority", "type": "enum[high,medium,low]", "required": true },
+    { "name": "impact", "type": "string", "required": false },
+    { "name": "campaignId", "type": "string", "required": false },
+    { "name": "adGroupId", "type": "string", "required": false },
+    { "name": "action", "type": "object<RecommendationAction>", "required": true },
+    { "name": "rationale", "type": "string", "required": false },
+    { "name": "status", "type": "enum[pending,approved,rejected,applied]", "required": true },
+    { "name": "createdAt", "type": "datetime", "required": false },
+    { "name": "appliedAt", "type": "datetime", "required": false }
+  ]
+}

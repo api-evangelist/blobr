@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/blobr/main/json-schema/blobr-campaign-schema.json",
+  "title": "Blobr Campaign",
+  "description": "Schema for a Google Ads campaign managed by Blobr AI platform",
+  "type": "object",
+  "properties": {
+    "campaignId": { "type": "string", "description": "Google Ads campaign ID" },
+    "name": { "type": "string", "description": "Campaign name" },
+    "status": { "type": "string", "enum": ["ENABLED", "PAUSED", "REMOVED"] },
+    "advertisingChannelType": {
+      "type": "string",
+      "enum": ["SEARCH", "DISPLAY", "SHOPPING", "VIDEO", "SMART", "PERFORMANCE_MAX"],
+      "description": "Campaign channel type"
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "amountMicros": { "type": "integer", "description": "Daily budget in micros (1M = $1)" },
+        "deliveryMethod": { "type": "string", "enum": ["STANDARD", "ACCELERATED"] }
+      }
+    },
+    "biddingStrategy": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["TARGET_CPA", "TARGET_ROAS", "MAXIMIZE_CONVERSIONS", "MAXIMIZE_CONVERSION_VALUE", "TARGET_IMPRESSION_SHARE", "MANUAL_CPC"]
+        },
+        "targetCpaMicros": { "type": "integer" },
+        "targetRoas": { "type": "number" }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "impressions": { "type": "integer" },
+        "clicks": { "type": "integer" },
+        "costMicros": { "type": "integer" },
+        "conversions": { "type": "number" },
+        "ctr": { "type": "number" },
+        "averageCpc": { "type": "number" },
+        "conversionRate": { "type": "number" },
+        "roas": { "type": "number" }
+      }
+    }
+  },
+  "required": ["campaignId", "name", "status"]
+}

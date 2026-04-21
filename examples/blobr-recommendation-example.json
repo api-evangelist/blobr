@@ -1,0 +1,22 @@
+{
+  "recommendationId": "REC-20260421-00847",
+  "agentType": "negative_keyword",
+  "priority": "high",
+  "impact": "Estimated 12% reduction in wasted spend (~$340/month)",
+  "campaignId": "12345678901",
+  "adGroupId": "98765432100",
+  "action": {
+    "type": "add",
+    "entityType": "negative_keyword",
+    "current": null,
+    "proposed": {
+      "text": "free",
+      "matchType": "BROAD",
+      "level": "campaign"
+    }
+  },
+  "rationale": "The keyword 'free' generated 2,340 impressions and 187 clicks at a cost of $4,675 with 0 conversions over the last 30 days. Adding as a campaign-level negative keyword will eliminate wasted spend from users searching for free alternatives to your paid product.",
+  "status": "pending",
+  "createdAt": "2026-04-21T08:15:00Z",
+  "appliedAt": null
+}

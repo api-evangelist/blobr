@@ -1,0 +1,13 @@
+{
+  "name": "Blobr Campaign Structure",
+  "description": "JSON structure for a Google Ads campaign in the Blobr platform",
+  "fields": [
+    { "name": "campaignId", "type": "string", "required": true },
+    { "name": "name", "type": "string", "required": true },
+    { "name": "status", "type": "enum[ENABLED,PAUSED,REMOVED]", "required": true },
+    { "name": "advertisingChannelType", "type": "enum[SEARCH,DISPLAY,SHOPPING,VIDEO,SMART,PERFORMANCE_MAX]", "required": false },
+    { "name": "budget", "type": "object<Budget>", "required": false },
+    { "name": "biddingStrategy", "type": "object<BiddingStrategy>", "required": false },
+    { "name": "metrics", "type": "object<CampaignMetrics>", "required": false }
+  ]
+}

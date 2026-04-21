@@ -12,7 +12,7 @@ Blobr is an AI-powered Google Ads management platform that deploys specialized A
 ## Timestamps
 
 - **Created:** 2026-03-26
-- **Modified:** 2026-04-19
+- **Modified:** 2026-04-21
 
 ## APIs
 
@@ -30,6 +30,11 @@ AI-powered Google Ads management platform providing automated campaign analysis,
 - [Documentation](https://www.blobr.io)
 - [Sign Up](https://app.blobr.ai/auth/sign-up)
 - [Login](https://app.blobr.ai/auth)
+- [JSON Schema - Campaign](json-schema/blobr-campaign-schema.json)
+- [JSON Schema - Recommendation](json-schema/blobr-recommendation-schema.json)
+- [JSON-LD Context](json-ld/blobr-context.jsonld)
+- [Example - Campaign](examples/blobr-campaign-example.json)
+- [Example - Recommendation](examples/blobr-recommendation-example.json)
 
 ## Common Properties
 
@@ -40,6 +45,9 @@ AI-powered Google Ads management platform providing automated campaign analysis,
 - [Blog](https://www.blobr.io/blog)
 - [Terms of Service](https://www.blobr.io/terms)
 - [Privacy Policy](https://www.blobr.io/privacy)
+- [Spectral Rules](rules/blobr-spectral-rules.yml)
+- [Naftiko Capability](capabilities/blobr-google-ads-ai.yaml)
+- [Vocabulary](vocabulary/blobr-vocabulary.yaml)
 
 ## Features
 

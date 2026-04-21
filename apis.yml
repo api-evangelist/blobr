@@ -17,7 +17,7 @@ tags:
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 created: '2026-03-26'
-modified: '2026-04-19'
+modified: '2026-04-21'
 specificationVersion: '0.19'
 apis:
   - aid: blobr:blobr-google-ads-ai
@@ -42,6 +42,20 @@ apis:
         url: https://app.blobr.ai/auth/sign-up
       - type: Login
         url: https://app.blobr.ai/auth
+      - type: JSONSchema
+        url: json-schema/blobr-campaign-schema.json
+      - type: JSONSchema
+        url: json-schema/blobr-recommendation-schema.json
+      - type: JSONStructure
+        url: json-structure/blobr-campaign-structure.json
+      - type: JSONStructure
+        url: json-structure/blobr-recommendation-structure.json
+      - type: JSONLD
+        url: json-ld/blobr-context.jsonld
+      - type: Example
+        url: examples/blobr-campaign-example.json
+      - type: Example
+        url: examples/blobr-recommendation-example.json
 common:
   - type: Website
     url: https://www.blobr.io
@@ -57,6 +71,12 @@ common:
     url: https://www.blobr.io/terms
   - type: PrivacyPolicy
     url: https://www.blobr.io/privacy
+  - type: SpectralRules
+    url: rules/blobr-spectral-rules.yml
+  - type: NaftikoCapability
+    url: capabilities/blobr-google-ads-ai.yaml
+  - type: Vocabulary
+    url: vocabulary/blobr-vocabulary.yaml
   - type: Features
     data:
       - name: 50+ Specialized AI Agents
