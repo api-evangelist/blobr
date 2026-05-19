@@ -57,6 +57,10 @@ apis:
       - type: Example
         url: examples/blobr-recommendation-example.json
 common:
+  - type: GitHubOrganization
+    url: https://github.com/blobr-io
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/blobr
   - type: Website
     url: https://www.blobr.io
   - type: SignUp
