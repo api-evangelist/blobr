@@ -1,0 +1,81 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTPS probes of every host named in apis.yml
+note: >-
+  Recorded absence. Every /.well-known/ path probed on the only Blobr host that still
+  answers TLS (www.blobr.io) returned HTTP 404 carrying the Webflow "404 - Page not found"
+  HTML shell — the same body the site root returns, i.e. the whole Webflow project is
+  unpublished rather than these paths being individually missing. The two hosts the
+  apis.yml Signup/Login pointers name (app.blobr.ai, blobr.ai) do not resolve at all
+  (DNS SERVFAIL — the .ai delegation is broken), and docs.blobr.io resolves to GitBook
+  but fails the TLS handshake, so no /.well-known/ surface could be probed there.
+  NO WellKnown or SecurityTxt pointer is emitted from this file: nothing returned a
+  document, and a 404 is not a presence.
+hosts_probed:
+  - host: www.blobr.io
+    reachable: true
+    transport: https
+    result: all paths 404 (Webflow unpublished-site shell)
+  - host: blobr.ai
+    reachable: false
+    transport: null
+    result: DNS SERVFAIL — no nameserver answer
+  - host: app.blobr.ai
+    reachable: false
+    transport: null
+    result: DNS SERVFAIL — no nameserver answer
+  - host: api.blobr.io
+    reachable: false
+    transport: null
+    result: DNS NXDOMAIN
+  - host: docs.blobr.io
+    reachable: false
+    transport: https
+    result: resolves to hosting.gitbook.io; TLS handshake failure (custom domain deprovisioned)
+host: https://www.blobr.io
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery ran in full and missed on every surface. No OpenAPI, no
+    GraphQL endpoint, no MCP server and no A2A agent card were found on any Blobr host.
+  probes:
+    - url: https://www.blobr.io/openapi.json
+      status: 404
+    - url: https://www.blobr.io/openapi.yaml
+      status: 404
+    - url: https://www.blobr.io/swagger.json
+      status: 404
+    - url: https://www.blobr.io/v1/openapi.json
+      status: 404
+    - url: https://www.blobr.io/api-docs
+      status: 404
+    - url: https://www.blobr.io/llms.txt
+      status: 404
+    - url: https://www.blobr.io/robots.txt
+      status: 404
+    - url: https://www.blobr.io/sitemap.xml
+      status: 404

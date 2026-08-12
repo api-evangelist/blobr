@@ -29,7 +29,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blobr.png
 created: '2026-03-26'
-modified: '2026-04-21'
+modified: '2026-08-12'
 specificationVersion: '0.19'
 apis:
   - aid: blobr:blobr-google-ads-ai
@@ -71,6 +71,8 @@ apis:
 common:
   - type: DomainSecurity
     url: security/blobr-domain-security.yml
+  - type: Lifecycle
+    url: lifecycle/blobr-lifecycle.yml
   - type: GitHubOrganization
     url: https://github.com/blobr-io
   - type: LinkedIn
@@ -154,3 +156,31 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Every Blobr host is dark — www.blobr.io answers TLS but returns the Webflow
+    "404 - Page not found" shell for the root and for /pricing, /blog, /robots.txt and
+    /sitemap.xml alike (an unpublished Webflow project), docs.blobr.io still points at
+    hosting.gitbook.io but fails the TLS handshake, and both blobr.ai and app.blobr.ai
+    (the signup/login hosts in this profile) return DNS SERVFAIL while api.blobr.io is
+    NXDOMAIN; the last Internet Archive capture of the site that returned 200 is
+    2026-05-10.
+  evidence:
+    - url: https://www.blobr.io/
+      status: 404
+    - url: https://www.blobr.io/pricing
+      status: 404
+    - url: https://www.blobr.io/robots.txt
+      status: 404
+    - url: https://www.blobr.io/.well-known/agent-card.json
+      status: 404
+    - url: https://www.blobr.io/openapi.json
+      status: 404
+  checked: '2026-08-12'

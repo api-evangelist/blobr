@@ -1,0 +1,41 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTPS/DNS probes of blobr.io, blobr.ai and docs.blobr.io
+versioning: null
+deprecation: null
+sla: null
+status_page: null
+deprecated_operations: []
+service_status:
+  state: unavailable
+  observed: '2026-08-12'
+  note: >-
+    Blobr publishes no versioning policy, no deprecation policy, no SLA and no status
+    page — because as of this probe the company's public surface is entirely offline.
+    The Webflow marketing site at www.blobr.io answers TLS but returns the Webflow
+    "404 - Page not found" shell for every path including the root, /pricing, /blog,
+    /robots.txt and /sitemap.xml, which is what an unpublished Webflow project serves.
+    The product hosts named in apis.yml (app.blobr.ai for signup and login, and blobr.ai)
+    return DNS SERVFAIL — the .ai delegation no longer answers — and api.blobr.io is
+    NXDOMAIN. The documentation host docs.blobr.io still points at hosting.gitbook.io
+    but the TLS handshake fails, the signature of a GitBook custom domain that has been
+    deprovisioned. The last Internet Archive capture of www.blobr.io that returned 200
+    is 2026-05-10; there are no successful captures after that date. This is recorded as
+    an observation, not a company announcement: no shutdown notice was found on any
+    Blobr-controlled surface, because no Blobr-controlled surface is serving content.
+  evidence:
+    - url: https://www.blobr.io/
+      status: 404
+      note: Webflow unpublished-site shell
+    - url: https://www.blobr.io/pricing
+      status: 404
+    - url: https://www.blobr.io/blog
+      status: 404
+    - url: https://www.blobr.io/robots.txt
+      status: 404
+    - url: https://docs.blobr.io/
+      status: 0
+      note: TLS handshake failure against hosting.gitbook.io
+    - url: https://app.blobr.ai/auth
+      status: 0
+      note: DNS SERVFAIL for app.blobr.ai

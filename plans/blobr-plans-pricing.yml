@@ -4,138 +4,41 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Blobr
 providerId: blobr
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-08-12'
+generated: '2026-08-12'
+method: probed
+source: https://www.blobr.io/pricing
 tags:
   - Advertising
   - AI Agents
   - Google Ads
   - Marketing Automation
   - PPC
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
-plans:
-  - id: blobr-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Blobr API surface. Intended for evaluation, prototyping, and
-      low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Blobr Google Ads AI Platform
-  - id: blobr-pro
-    name: Professional
-    type: paid
-    description: Production tier for Blobr. Provides higher quotas, priority support, and access to the
-      broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Blobr Google Ads AI Platform
-  - id: blobr-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Blobr. Includes dedicated capacity, contractual SLAs, security
-      review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Blobr Google Ads AI Platform
+description: >-
+  Honest zero. Blobr publishes no plans or pricing that can be read today. This file
+  previously carried a free/professional/enterprise scaffold written by the 2026-05-04
+  bulk sweep with invented request quotas and prices; none of it was harvested from
+  Blobr and none of it can be verified, so it has been replaced with the probe result.
+plan_count: 0
+plans: []
+note: >-
+  Probed 2026-08-12. https://www.blobr.io/pricing returns HTTP 404 with the Webflow
+  "404 - Page not found" shell — the same body every other path on the host returns,
+  including the site root and /robots.txt, meaning the Webflow project is unpublished
+  rather than the pricing page having merely moved. The product host that carried the
+  paid signup flow, app.blobr.ai, returns DNS SERVFAIL. There is therefore no published
+  tier, price, quota or overage to record. The scaffold that used to sit here asserted
+  three tiers with specific request limits and dollar figures that Blobr never published;
+  removing it removes fabricated pricing from the catalog. See lifecycle/blobr-lifecycle.yml
+  for the full availability evidence.
+evidence:
+  - url: https://www.blobr.io/pricing
+    status: 404
+  - url: https://www.blobr.io/
+    status: 404
+  - url: https://app.blobr.ai/auth/sign-up
+    status: 0
+    note: DNS SERVFAIL for app.blobr.ai
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

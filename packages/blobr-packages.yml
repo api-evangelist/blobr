@@ -1,0 +1,52 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, rubygems.org, crates.io and the api.github.com
+  blobr-io organization listing
+package_count: 0
+packages: []
+note: >-
+  Honest zero. No first-party Blobr client library was found in any public registry.
+  The searches run were: npm exact lookups for blobr, @blobr/sdk, blobr-sdk and
+  blobr-client; the npm text search for "blobr"; PyPI for blobr and blobr-sdk;
+  RubyGems for blobr; crates.io for blobr. Blobr's own documentation host
+  (docs.blobr.io) could not be read to derive SDK links — it resolves to
+  hosting.gitbook.io but fails the TLS handshake — and its marketing site returns 404
+  on every path, so no SDK page could be harvested either. No SDKs pointer is emitted.
+false_positives:
+  - registry: npm
+    name: blobr
+    url: https://www.npmjs.com/package/blobr
+    version: 1.0.3
+    published: '2025-04-02'
+    repository: https://github.com/gbarros/celestia-terminal
+    official: false
+    why_excluded: >-
+      Name collision only. This is "a terminal-based rollup activity monitor for
+      Celestia" published from an unrelated personal GitHub repo. It is recorded here
+      so a later round does not wire it as Blobr's SDK on the strength of the name.
+github_organization:
+  url: https://github.com/blobr-io
+  public_repos: 4
+  note: >-
+    The blobr-io GitHub organization is live but ships no client library. Its four
+    public repositories are crypto-json, serverless-create-global-dynamodb-table,
+    json-schema-filter and blob-farm — internal/infrastructure utilities, none of them
+    a Blobr API client. The most recent push to any of them is 2022-02-24.
+  repositories:
+    - name: crypto-json
+      version: null
+      published: null
+      last_push: '2020-07-30'
+    - name: serverless-create-global-dynamodb-table
+      version: null
+      published: null
+      last_push: '2021-04-07'
+    - name: json-schema-filter
+      version: null
+      published: null
+      last_push: '2021-04-23'
+    - name: blob-farm
+      version: null
+      published: null
+      last_push: '2022-02-24'

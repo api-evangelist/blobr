@@ -4,7 +4,10 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Blobr
 providerId: blobr
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-08-12'
+generated: '2026-08-12'
+method: probed
+source: https://www.blobr.io/
 tags:
   - Advertising
   - AI Agents
@@ -12,78 +15,34 @@ tags:
   - Marketing Automation
   - PPC
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Blobr API surface. Captures per-tier quotas,
-  burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to be replaced
-  with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Blobr Google Ads AI Platform
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Blobr Google Ads AI Platform
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Blobr Google Ads AI Platform
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Blobr Google Ads AI Platform
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Blobr Google Ads AI Platform
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+description: >-
+  Honest zero. Blobr publishes no rate limits that can be read today. This file
+  previously carried scaffold limits (free 10 rpm / professional 100 rpm / enterprise
+  1000 rpm, plus X-RateLimit-* response headers) written by the 2026-05-04 bulk sweep.
+  None of it was harvested from Blobr and none of it can be verified, so it has been
+  replaced with the probe result.
+limit_count: 0
+limits: []
+headers: {}
+responseCodes: {}
+policies: []
+note: >-
+  Probed 2026-08-12. No Blobr documentation host is serving content: docs.blobr.io
+  resolves to hosting.gitbook.io but fails the TLS handshake, www.blobr.io returns the
+  Webflow unpublished-site 404 for every path, and api.blobr.io is NXDOMAIN. There is no
+  live endpoint against which a rate-limit response header could be observed and no
+  reachable documentation page in which a published limit could be read. The header names
+  and per-tier numbers previously recorded here were invented by the scaffold, not
+  observed; asserting X-RateLimit-* on an API nobody can call is exactly the kind of
+  false runtime signal an agent would act on. See lifecycle/blobr-lifecycle.yml.
+evidence:
+  - url: https://www.blobr.io/
+    status: 404
+  - url: https://docs.blobr.io/
+    status: 0
+    note: TLS handshake failure against hosting.gitbook.io
+  - url: https://www.blobr.io/api-docs
+    status: 404
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
