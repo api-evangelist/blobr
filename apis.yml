@@ -30,7 +30,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blobr.png
 created: '2026-03-26'
 modified: '2026-08-12'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: blobr:blobr-google-ads-ai
     name: Blobr Google Ads AI Platform
