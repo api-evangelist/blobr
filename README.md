@@ -1,4 +1,4 @@
-# Blobr (blobr)
+# Blobr
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,84 +66,144 @@
 
 Blobr is an AI-powered Google Ads management platform that deploys specialized AI agents to automate campaign optimization, keyword management, ad copy improvement, and budget allocation. Originally founded as an API monetization and portal platform, Blobr has evolved into an AI teammate for Google Ads that helps agencies and advertisers automate the bulk of daily campaign management tasks. The platform features 50+ specialized AI agents that analyze accounts, generate recommendations, and implement approved changes directly to Google Ads.
 
-**URL:** [https://www.blobr.io](https://www.blobr.io)
+**Areas:** Advertising · AI Agents · Google Ads · Marketing Automation · PPC
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Blobr on APIs.io
 
-## Tags:
+Everything profiled for Blobr is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blobr/](https://apis.io/providers/blobr/)** — or go straight to one of the APIs or properties below.
 
- - Advertising, AI Agents, Google Ads, Marketing Automation, PPC
+### APIs (1)
 
-## Timestamps
+- [Blobr Google Ads AI Platform](https://apis.io/apis/blobr/blobr-google-ads-ai/) — AI-powered Google Ads management platform providing automated campaign analysis, optimization recommendations, and direct implementation via 50+ specialized…
 
-- **Created:** 2026-03-26
-- **Modified:** 2026-04-21
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Blobr Google Ads AI Platform
-AI-powered Google Ads management platform providing automated campaign analysis, optimization recommendations, and direct implementation via 50+ specialized AI agents. Supports agencies managing multiple accounts and advertisers seeking expert guidance for campaign performance improvement.
+#### JSON Schema (2)
 
-**Human URL:** [https://www.blobr.io](https://www.blobr.io)
+The data models the API reads and writes.
 
-#### Tags:
+- [Blobr Campaign](https://apis.io/schemas/blobr/blobr-campaign/)
+- [Blobr AI Recommendation](https://apis.io/schemas/blobr/blobr-recommendation/)
 
- - Advertising, AI Agents, Google Ads, Marketing Automation, PPC
+#### JSON Structure (2)
 
-#### Properties
+Data models expressed in JSON Structure.
 
-- [Documentation](https://www.blobr.io)
-- [Sign Up](https://app.blobr.ai/auth/sign-up)
-- [Login](https://app.blobr.ai/auth)
-- [JSON Schema - Campaign](json-schema/blobr-campaign-schema.json)
-- [JSON Schema - Recommendation](json-schema/blobr-recommendation-schema.json)
-- [JSON-LD Context](json-ld/blobr-context.jsonld)
-- [Example - Campaign](examples/blobr-campaign-example.json)
-- [Example - Recommendation](examples/blobr-recommendation-example.json)
+- [Blobr Campaign Structure](https://apis.io/json-structure/blobr/blobr-campaign-structure/)
+- [Blobr Recommendation Structure](https://apis.io/json-structure/blobr/blobr-recommendation-structure/)
 
-## Common Properties
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Blobr Context](https://apis.io/jsonld/blobr/blobr-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Blobr AI Platform Vocabulary](https://apis.io/vocabularies/blobr/blobr-vocabulary/)
+
+#### Examples (2)
+
+Example requests and responses.
+
+- [Blobr Campaign Example](https://apis.io/examples/blobr/blobr-campaign-example/)
+- [Blobr Recommendation Example](https://apis.io/examples/blobr/blobr-recommendation-example/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Blobr — jsonschema rules](https://apis.io/rules/blobr/blobr-jsonschema-spectral-rules/)
+- [Blobr API Rules](https://apis.io/rules/blobr/blobr-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Blobr Domain Security](https://apis.io/security/blobr/blobr-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Blobr Plans Pricing](https://apis.io/plans/blobr/blobr-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Blobr Rate Limits](https://apis.io/rate-limits/blobr/blobr-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Blobr Finops](https://apis.io/finops/blobr/blobr-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.blobr.io)
-- [Sign Up](https://app.blobr.ai/auth/sign-up)
-- [Login](https://app.blobr.ai/auth)
 - [Pricing](https://www.blobr.io/pricing)
 - [Blog](https://www.blobr.io/blog)
-- [Terms of Service](https://www.blobr.io/terms)
-- [Privacy Policy](https://www.blobr.io/privacy)
-- [Spectral Rules](rules/blobr-spectral-rules.yml)
-- [Naftiko Capability](capabilities/blobr-google-ads-ai.yaml)
-- [Vocabulary](vocabulary/blobr-vocabulary.yaml)
+- [Terms of service](https://www.blobr.io/terms)
+- [Privacy policy](https://www.blobr.io/privacy)
+- [GitHub](https://github.com/blobr-io)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| 50+ Specialized AI Agents | Fifty-plus AI agents each specialized for specific Google Ads optimization tasks including campaign creation, keyword discovery, and ad copy improvement. |
-| Campaign Analysis and Monitoring | Continuous monitoring of campaigns, ad groups, keywords, and audiences to identify high-performing elements, budget waste, and account changes. |
-| Review-and-Edit Workflow | All AI recommendations pass through a review-and-edit stage where users can review, modify, and selectively approve changes before pushing to Google Ads. |
-| Custom Rules and Constraints | Users can set brand voice guidelines, naming conventions, bid thresholds, and other custom rules that govern AI agent behavior. |
-| Agency Multi-Account Management | Agencies can connect and manage multiple Google Ads accounts, enabling automation at scale across entire client portfolios. |
-| Scheduling Control | Flexible scheduling for AI agent runs: daily, weekly, or monthly cycles aligned to account management cadence. |
+**Kin Score 16.8** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 29.2 |
+| Contract governance | 23.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 6.6 |
 
-| Name | Description |
-|------|-------------|
-| Agency Account Automation | Agencies automate 80% of daily Google Ads management tasks, enabling account managers to handle more clients without expanding headcount. |
-| Campaign Performance Optimization | Advertisers receive prioritized weekly recommendations to improve campaign performance based on historical data and AI analysis. |
-| Keyword Expansion | AI agents discover new keyword opportunities and traffic expansion areas aligned with campaign goals and business context. |
-| Negative Keyword Management | Automated identification and curation of negative keywords to reduce budget waste from irrelevant search traffic. |
-| Ad Copy Improvement | AI agents generate and test improved ad copy variations for relevance, quality score, and landing page alignment. |
+**Agent readiness 3.8** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Google Ads | Native Google Ads integration via one-click connection, enabling direct reading and writing of campaign data, bids, keywords, and ad copy. |
-| Google Ads API | Blobr uses the Google Ads API as the underlying integration mechanism for accessing and managing advertiser account data. |
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blobr/](https://apis.io/providers/blobr/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Blobr: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blobr/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
